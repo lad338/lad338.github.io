@@ -10,8 +10,8 @@ export const MainDescription: React.FC = () => {
         textAlign: 'left',
         margin: 'auto',
         width: '75vw',
-        minHeight: '75vh',
-        marginTop: '50%',
+        minHeight: '65vh',
+        marginTop: '35vh',
       }}
     >
       <Typography variant="h1">$ Hi, I am</Typography>
@@ -23,6 +23,8 @@ export const MainDescription: React.FC = () => {
       <Typography>
         I am currently open for any Canadian developer opportunities.
       </Typography>
+      <Typography>Learn more about me over here.</Typography>
+      <Typography>You may also check out my resume or my projects.</Typography>
     </Box>
   )
 }

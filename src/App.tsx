@@ -1,6 +1,4 @@
 import React from 'react'
-import logo from './assets/logo.svg'
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import './assets/App.css'
 import { AppBarContainer } from './components/AppBarContainer'
 import { Core } from './views/Core'
@@ -30,7 +28,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <Box className="App">
         <CssBaseline />
-        path="/" element=
         {
           <AppBarContainer
             content={() => (
