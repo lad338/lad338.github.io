@@ -1,14 +1,15 @@
 import React from 'react'
 import { AppBarCustomised } from './AppBarCustomized'
+import Box from '@mui/material/Box'
 
 export const AppBarContainer: React.FC<Props> = (props) => {
   return (
-    <div className="app-bar-container">
+    <Box className="app-bar-container">
       <>
         <AppBarCustomised />
         {props.content()}
       </>
-    </div>
+    </Box>
   )
 }
 
