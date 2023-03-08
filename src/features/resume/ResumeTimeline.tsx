@@ -1,7 +1,5 @@
 import * as React from 'react'
 import Timeline from '@mui/lab/Timeline'
-import TimelineContent from '@mui/lab/TimelineContent'
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent'
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew'
 import SchoolIcon from '@mui/icons-material/School'
 import { ResumeTimelineItem } from './ResumeTimelineItem'

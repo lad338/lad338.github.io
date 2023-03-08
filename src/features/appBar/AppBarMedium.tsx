@@ -3,6 +3,7 @@ import AdbIcon from '@mui/icons-material/Adb'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
+import { PAGES } from './pages'
 
 export const AppBarMedium: React.FC<Props> = (props) => {
   return (
@@ -26,13 +27,14 @@ export const AppBarMedium: React.FC<Props> = (props) => {
         Home
       </Typography>
       <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-        {props.pages.map((page) => (
+        {PAGES.map((page) => (
           <Button
-            key={page}
+            key={page.anchor}
+            href={'#' + page.anchor}
             onClick={props.handleCloseNavMenu}
             sx={{ my: 2, color: 'white', display: 'block' }}
           >
-            {page}
+            {page.label}
           </Button>
         ))}
       </Box>
@@ -41,6 +43,5 @@ export const AppBarMedium: React.FC<Props> = (props) => {
 }
 
 type Props = {
-  pages: string[]
   handleCloseNavMenu: () => void
 }

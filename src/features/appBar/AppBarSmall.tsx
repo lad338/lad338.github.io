@@ -6,6 +6,7 @@ import MenuItem from '@mui/material/MenuItem'
 import Typography from '@mui/material/Typography'
 import AdbIcon from '@mui/icons-material/Adb'
 import * as React from 'react'
+import { PAGES } from './pages'
 
 export const AppBarSmall: React.FC<Props> = (props) => {
   return (
@@ -39,9 +40,13 @@ export const AppBarSmall: React.FC<Props> = (props) => {
             display: { xs: 'block', md: 'none' },
           }}
         >
-          {props.pages.map((page) => (
-            <MenuItem key={page} onClick={props.handleCloseNavMenu}>
-              <Typography textAlign="center">{page}</Typography>
+          {PAGES.map((page) => (
+            <MenuItem
+              key={page.anchor}
+              onClick={props.handleCloseNavMenu}
+              href={'#' + page.anchor}
+            >
+              <Typography textAlign="center">{page.label}</Typography>
             </MenuItem>
           ))}
         </Menu>
@@ -70,7 +75,6 @@ export const AppBarSmall: React.FC<Props> = (props) => {
 }
 
 type Props = {
-  pages: string[]
   anchorElNav: null | HTMLElement
   handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void
   handleCloseNavMenu: () => void
