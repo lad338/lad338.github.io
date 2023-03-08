@@ -6,7 +6,7 @@ import { IconButton } from '@mui/material'
 
 const iconStyle: SxProps = {
   m: 'auto',
-  display: 'block',
+  display: 'flex',
 }
 export const AppBarRightIcons: React.FC = () => {
   return (
@@ -14,8 +14,8 @@ export const AppBarRightIcons: React.FC = () => {
       sx={{
         display: 'flex',
         flexDirection: 'row',
-        position: 'relative',
-        right: 0,
+        position: 'fixed',
+        right: 0.1,
       }}
     >
       {ICONS.map((icon) => {

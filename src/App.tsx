@@ -7,6 +7,19 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme, ThemeProvider } from '@mui/material'
 
 const theme = createTheme({
+  palette: {
+    mode: 'dark',
+    text: {
+      primary: '#d8d8d2',
+    },
+    primary: {
+      main: '#2d333b',
+      contrastText: '#d8d8d2',
+    },
+    background: {
+      default: '#22272e',
+    },
+  },
   typography: {
     h1: {
       fontSize: 16,
