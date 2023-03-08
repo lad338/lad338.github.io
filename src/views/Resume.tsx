@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-import { ResumeTimeline } from '../components/ResumeTimeline'
+import { ResumeTimeline } from '../features/resume/ResumeTimeline'
+import { ResumeText } from '../features/resume/ResumeText'
 
 export const Resume: React.FC = () => {
   return (
@@ -12,20 +12,7 @@ export const Resume: React.FC = () => {
         marginBottom: '35dvh',
       }}
     >
-      <Box
-        id="resume-text"
-        sx={{
-          textAlign: 'left',
-          margin: 'auto',
-          width: '75vw',
-          marginBottom: 5,
-        }}
-      >
-        <Typography variant="h4" marginBottom={5}>
-          Resume
-        </Typography>
-        <Typography>You may download my latest resume here.</Typography>
-      </Box>
+      <ResumeText />
       <ResumeTimeline />
     </Box>
   )

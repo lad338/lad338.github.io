@@ -7,12 +7,12 @@ export const AppBarContainer: React.FC<Props> = (props) => {
     <Box className="app-bar-container">
       <>
         <AppBarCustomised />
-        {props.content()}
+        {props.content}
       </>
     </Box>
   )
 }
 
 type Props = {
-  content: () => React.ReactNode
+  content: React.ReactNode
 }

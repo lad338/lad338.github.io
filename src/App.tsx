@@ -1,6 +1,6 @@
 import React from 'react'
 import './assets/App.css'
-import { AppBarContainer } from './components/AppBarContainer'
+import { AppBarContainer } from './features/appBar/AppBarContainer'
 import { Core } from './views/Core'
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -28,15 +28,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Box className="App">
         <CssBaseline />
-        {
-          <AppBarContainer
-            content={() => (
-              <>
-                <Core />
-              </>
-            )}
-          />
-        }
+        {<AppBarContainer content={<Core />} />}
       </Box>
     </ThemeProvider>
   )
