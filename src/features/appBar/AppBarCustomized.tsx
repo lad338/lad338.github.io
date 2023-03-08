@@ -5,6 +5,7 @@ import Container from '@mui/material/Container'
 import { AppBarMedium } from './AppBarMedium'
 import { AppBarSmall } from './AppBarSmall'
 import { HideOnScroll } from './HideOnScroll'
+import { AppBarRightIcons } from './AppBarRightIcons'
 
 export const AppBarCustomised: React.FC = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
@@ -27,6 +28,7 @@ export const AppBarCustomised: React.FC = () => {
               handleCloseNavMenu={handleCloseNavMenu}
               handleOpenNavMenu={handleOpenNavMenu}
             />
+            <AppBarRightIcons />
           </Toolbar>
         </Container>
       </AppBar>
