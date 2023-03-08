@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography'
 export const About: React.FC = () => {
   return (
     <Box
-      id="about-me"
+      id="about-me-view"
       sx={{
         textAlign: 'left',
         margin: 'auto',
@@ -13,8 +13,10 @@ export const About: React.FC = () => {
         minHeight: '65vh',
       }}
     >
-      <Typography variant="h4">About me</Typography>
-      <Typography marginTop={5}>Hi, I am Angus. </Typography>
+      <Typography variant="h4" marginBottom={5}>
+        About me
+      </Typography>
+      <Typography>Hi, I am Angus. </Typography>
       <Typography>
         Although I have a rather extensive work experience in backend
         development, I like to address myself as a Software Developer than a

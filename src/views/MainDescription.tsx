@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography'
 export const MainDescription: React.FC = () => {
   return (
     <Box
-      id="main-description"
+      id="main-description-view"
       sx={{
         textAlign: 'left',
         margin: 'auto',
@@ -16,7 +16,7 @@ export const MainDescription: React.FC = () => {
     >
       <Typography variant="h1">$ Hi, I am</Typography>
       <Typography variant="h2">ANGUS DICKY LI,</Typography>
-      <Typography variant="h3">A SOFTWARE DEVELOPER</Typography>
+      <Typography variant="h3">a SOFTWARE DEVELOPER</Typography>
       <Typography>
         who recently moved to Toronto, Canada from Hong Kong.
       </Typography>
