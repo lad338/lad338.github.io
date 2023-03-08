@@ -9,11 +9,13 @@ import {
   ABOUT_ANCHOR,
   PROJECTS_ANCHOR,
   RESUME_ANCHOR,
+  TOP_ANCHOR,
 } from '../features/appBar/pages'
 
 export const Core: React.FC = () => {
   return (
     <Box id="core-view">
+      <AppAnchor anchor={TOP_ANCHOR} />
       <MainDescription />
       <AppAnchor anchor={ABOUT_ANCHOR} />
       <About />

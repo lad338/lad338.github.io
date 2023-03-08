@@ -20,6 +20,13 @@ const theme = createTheme({
       fontSize: '5.7vw',
       fontWeight: 'bold',
     },
+    h5: {
+      fontWeight: 500,
+      letterSpacing: '.3rem',
+      color: 'white',
+      textDecoration: 'none',
+      fontSize: '1rem',
+    },
   },
 })
 

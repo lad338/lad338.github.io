@@ -4,17 +4,15 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Typography from '@mui/material/Typography'
-import AdbIcon from '@mui/icons-material/Adb'
 import * as React from 'react'
 import { PAGES } from './pages'
 
 export const AppBarSmall: React.FC<Props> = (props) => {
   return (
     <>
-      <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+      <Box sx={{ position: 'relative', display: { xs: 'flex', sm: 'none' } }}>
         <IconButton
           size="large"
-          aria-label="account of current user"
           aria-controls="menu-appbar"
           aria-haspopup="true"
           onClick={props.handleOpenNavMenu}
@@ -37,38 +35,32 @@ export const AppBarSmall: React.FC<Props> = (props) => {
           open={Boolean(props.anchorElNav)}
           onClose={props.handleCloseNavMenu}
           sx={{
-            display: { xs: 'block', md: 'none' },
+            display: { xs: 'block', sm: 'none' },
           }}
         >
           {PAGES.map((page) => (
             <MenuItem
+              component="a"
               key={page.anchor}
-              onClick={props.handleCloseNavMenu}
               href={'#' + page.anchor}
+              onClick={props.handleCloseNavMenu}
             >
               <Typography textAlign="center">{page.label}</Typography>
             </MenuItem>
           ))}
         </Menu>
       </Box>
-      <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
       <Typography
         variant="h5"
         noWrap
         component="a"
-        href=""
+        href="/"
         sx={{
-          mr: 2,
-          display: { xs: 'flex', md: 'none' },
-          flexGrow: 1,
-          fontFamily: 'monospace',
-          fontWeight: 700,
-          letterSpacing: '.3rem',
-          color: 'inherit',
-          textDecoration: 'none',
+          margin: 'auto',
+          display: { xs: 'flex', sm: 'none' },
         }}
       >
-        Home
+        Angus Li
       </Typography>
     </>
   )

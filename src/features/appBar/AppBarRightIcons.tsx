@@ -5,13 +5,19 @@ import { ICONS } from './icons'
 import { IconButton } from '@mui/material'
 
 const iconStyle: SxProps = {
-  mx: 1,
-  my: 2,
+  m: 'auto',
   display: 'block',
 }
 export const AppBarRightIcons: React.FC = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        position: 'relative',
+        right: 0,
+      }}
+    >
       {ICONS.map((icon) => {
         return (
           <IconButton

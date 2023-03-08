@@ -1,5 +1,6 @@
 import { Page } from './types/page'
 
+export const TOP_ANCHOR = 'top'
 export const ABOUT_ANCHOR = 'about'
 export const RESUME_ANCHOR = 'resume'
 export const PROJECTS_ANCHOR = 'projects'
