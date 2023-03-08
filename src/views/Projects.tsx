@@ -1,32 +1,30 @@
 import * as React from 'react'
-import Box from '@mui/material/Box'
+import { Box } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import { ResumeTimeline } from '../components/ResumeTimeline'
 
-export const Resume: React.FC = () => {
+export const Projects: React.FC = () => {
   return (
     <Box
-      id="resume-view"
+      id="projects-view"
       sx={{
         margin: 'auto',
-        marginBottom: '35dvh',
+        minHeight: '100vh',
       }}
     >
       <Box
-        id="resume-text"
+        id="projects-text"
         sx={{
           textAlign: 'left',
           margin: 'auto',
           width: '75vw',
-          marginBottom: 5,
         }}
       >
         <Typography variant="h4" marginBottom={5}>
-          Resume
+          Projects
         </Typography>
-        <Typography>You may download my latest resume here.</Typography>
+        <Typography>Here are some projects I have created:</Typography>
+        <Typography>Under construction</Typography>
       </Box>
-      <ResumeTimeline />
     </Box>
   )
 }

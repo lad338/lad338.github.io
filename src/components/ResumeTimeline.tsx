@@ -17,7 +17,7 @@ import { CronosContent } from '../features/resume/CronosContent'
 
 export const ResumeTimeline: React.FC = () => {
   return (
-    <Timeline sx={{ width: '98vw' }}>
+    <Timeline sx={{ width: '90vw' }}>
       <ResumeTimelineItem
         oppositeContent={<UniversityOppositeContent />}
         content={<UniversityContent />}

@@ -3,6 +3,7 @@ import Box from '@mui/material/Box'
 import { MainDescription } from './MainDescription'
 import { About } from './About'
 import { Resume } from './Resume'
+import { Projects } from './Projects'
 
 export const Core: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ export const Core: React.FC = () => {
       <MainDescription />
       <About />
       <Resume />
+      <Projects />
     </Box>
   )
 }
