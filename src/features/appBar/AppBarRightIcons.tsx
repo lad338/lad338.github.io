@@ -14,7 +14,7 @@ export const AppBarRightIcons: React.FC = () => {
       sx={{
         display: 'flex',
         flexDirection: 'row',
-        position: 'fixed',
+        position: 'relative',
         right: 0.1,
       }}
     >

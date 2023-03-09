@@ -8,7 +8,6 @@ export const Resume: React.FC = () => {
     <Box
       id="resume-view"
       sx={{
-        margin: 'auto',
         marginBottom: '35dvh',
       }}
     >

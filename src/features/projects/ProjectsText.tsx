@@ -9,13 +9,15 @@ export const ProjectsText: React.FC = () => {
       sx={{
         textAlign: 'left',
         margin: 'auto',
-        width: '75vw',
+        width: '84vw',
       }}
     >
-      <Typography variant="h4" marginBottom={5}>
+      <Typography variant="h4" marginBottom={5} color="text.secondary">
         Projects
       </Typography>
-      <Typography>Here are some projects I have created:</Typography>
+      <Typography color="grey.500" marginBottom={3}>
+        Here are some projects I have created:
+      </Typography>
     </Box>
   )
 }

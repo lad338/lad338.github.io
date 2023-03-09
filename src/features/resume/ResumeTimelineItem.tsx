@@ -9,11 +9,7 @@ export const ResumeTimelineItem = (props: Props) => {
   return (
     <div className="resume-item-container">
       <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          variant="body2"
-          color="text.secondary"
-        >
+        <TimelineOppositeContent sx={{ m: 'auto 0' }} variant="body2">
           {props.oppositeContent}
         </TimelineOppositeContent>
         <TimelineSeparator>

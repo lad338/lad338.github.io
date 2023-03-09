@@ -15,7 +15,9 @@ export const AppBarMedium: React.FC<Props> = (props) => {
     <>
       <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
         <Button href={'/'} sx={buttonStyle}>
-          <Typography variant="h5">Home</Typography>
+          <Typography variant="h5" color="text.secondary">
+            Home
+          </Typography>
         </Button>
 
         {PAGES.map((page) => (
@@ -25,7 +27,9 @@ export const AppBarMedium: React.FC<Props> = (props) => {
             onClick={props.handleCloseNavMenu}
             sx={buttonStyle}
           >
-            <Typography variant="h5">{page.label}</Typography>
+            <Typography variant="h5" color="primary.contrastText">
+              {page.label}
+            </Typography>
           </Button>
         ))}
       </Box>

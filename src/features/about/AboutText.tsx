@@ -9,11 +9,13 @@ export const AboutText: React.FC = () => {
       sx={{
         textAlign: 'left',
         margin: 'auto',
-        width: '75vw',
+        width: '84vw',
+        maxWidth: 750,
         minHeight: '65vh',
+        color: 'grey.500',
       }}
     >
-      <Typography variant="h4" marginBottom={5}>
+      <Typography variant="h4" marginBottom={5} color="text.secondary">
         About me
       </Typography>
       <Typography>Hi, I am Angus. </Typography>
@@ -28,7 +30,10 @@ export const AboutText: React.FC = () => {
         You may see me building stuff in different languages and frameworks. I
         am a backend developer at work, a web app and game developer at home.
       </Typography>
-      <Typography>Hence, a Software Developer.</Typography>
+      <Typography display="inline">Hence, a</Typography>
+      <Typography display="inline" color="primary.contrastText">
+        {' Software Developer.'}
+      </Typography>
     </Box>
   )
 }

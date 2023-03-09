@@ -52,6 +52,8 @@ export const AppBarSmall: React.FC<Props> = (props) => {
       </Box>
       <Typography
         variant="h5"
+        display="inline"
+        color="text.secondary"
         noWrap
         component="a"
         href="/"
@@ -60,7 +62,7 @@ export const AppBarSmall: React.FC<Props> = (props) => {
           display: { xs: 'block', sm: 'none' },
         }}
       >
-        Angus Li
+        ANGUS LI
       </Typography>
     </>
   )

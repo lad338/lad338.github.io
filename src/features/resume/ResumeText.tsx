@@ -7,16 +7,17 @@ export const ResumeText: React.FC = () => {
     <Box
       id="resume-text"
       sx={{
-        textAlign: 'left',
         margin: 'auto',
-        width: '75vw',
+        width: '84vw',
         marginBottom: 5,
       }}
     >
-      <Typography variant="h4" marginBottom={5}>
+      <Typography variant="h4" marginBottom={5} color="text.secondary">
         Resume
       </Typography>
-      <Typography>You may download my latest resume here.</Typography>
+      <Typography color="grey.500">
+        You may download my latest resume here.
+      </Typography>
     </Box>
   )
 }

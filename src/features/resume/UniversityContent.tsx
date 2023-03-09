@@ -4,29 +4,35 @@ import * as React from 'react'
 export const UniversityContent: React.FC = () => {
   return (
     <>
-      <Typography>Final year project</Typography>
-      <Typography>
-        AI Tutor for Programming Class (the Auto Grading Engine)
+      <Typography variant="body2">Final year project</Typography>
+      <Typography variant="subtitle1">
+        AI Tutor for Programming Class <br />
+        (the Auto Grading Engine)
       </Typography>
-      <Typography>
+      <Typography variant="body2" marginTop={3} marginBottom={0}>
         A web based auto grading system on code submission of programming
         learners.
-      </Typography>
-      <Typography>
+        <br />
         Other than pass or fail, the grading system can also provide
         recommendations based on big data of pass submission from other
         students.
       </Typography>
-      <Typography>Selected components:</Typography>
-      <Typography>
-        Extracting abstract syntax tree (AST) in Python program submissions.
+      <Typography variant="subtitle2" marginTop={3}>
+        Selected components:
       </Typography>
-      <Typography>
-        Determining logic flow information from ASTs such as conditional
-        statements and loops.
-      </Typography>
-      <Typography>
-        Running cluster analysis on big data of AST from programs using R.
+      <Typography variant="body2" marginBottom={5}>
+        <ul style={{ marginLeft: -25 }}>
+          <li>
+            Extracting abstract syntax tree (AST) in Python program submissions.
+          </li>
+          <li>
+            Determining logic flow information from ASTs such as conditional
+            statements and loops.
+          </li>
+          <li>
+            Running cluster analysis on big data of AST from programs using R.
+          </li>
+        </ul>
       </Typography>
     </>
   )
