@@ -1,6 +1,7 @@
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import * as React from 'react'
+import { Link } from '@mui/material'
 
 export const MainDescriptionText: React.FC = () => {
   return (
@@ -41,8 +42,24 @@ export const MainDescriptionText: React.FC = () => {
       <Typography>
         I am currently open for any Canadian developer opportunities.
       </Typography>
-      <Typography>Learn more about me over here.</Typography>
-      <Typography>You may also check out my resume or my projects.</Typography>
+      <Typography>
+        Learn more about me over{' '}
+        <Link color="text.secondary" underline="none" href="#about">
+          here
+        </Link>
+        .
+      </Typography>
+      <Typography>
+        You may also check out my{' '}
+        <Link color="text.secondary" underline="none" href="#resume">
+          resume
+        </Link>{' '}
+        or my{' '}
+        <Link color="text.secondary" underline="none" href="#projects">
+          projects
+        </Link>
+        .
+      </Typography>
     </Box>
   )
 }
