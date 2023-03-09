@@ -10,14 +10,7 @@ const iconStyle: SxProps = {
 }
 export const AppBarRightIcons: React.FC = () => {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'row',
-        position: 'relative',
-        right: 0.1,
-      }}
-    >
+    <Box display="flex" flexDirection="row" position="relative" right={0.1}>
       {ICONS.map((icon) => {
         return (
           <IconButton

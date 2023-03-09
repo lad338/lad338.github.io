@@ -10,7 +10,7 @@ import { PAGES } from './pages'
 export const AppBarSmall: React.FC<Props> = (props) => {
   return (
     <>
-      <Box sx={{ position: 'relative', display: { xs: 'fixed', sm: 'none' } }}>
+      <Box position="relative" display={{ xs: 'fixed', sm: 'none' }}>
         <IconButton
           size="large"
           aria-controls="menu-appbar"

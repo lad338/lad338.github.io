@@ -16,10 +16,7 @@ import Box from '@mui/material/Box'
 
 export const ResumeTimeline: React.FC = () => {
   return (
-    <Box
-      sx={{ width: '84vw', margin: 'auto' }}
-      display={{ xs: 'none', md: 'flex' }}
-    >
+    <Box width="84vw" margin="auto" display={{ xs: 'none', md: 'flex' }}>
       <Timeline>
         <ResumeTimelineItem
           oppositeContent={<UniversityOppositeContent />}

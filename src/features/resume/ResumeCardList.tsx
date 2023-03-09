@@ -13,7 +13,8 @@ import { UniversityContent } from './UniversityContent'
 export const ResumeCardList: React.FC = () => {
   return (
     <Box
-      sx={{ width: '96vw', margin: 'auto' }}
+      width="96vw"
+      margin="auto"
       display={{ xs: 'flex', md: 'none' }}
       flexDirection="column"
     >

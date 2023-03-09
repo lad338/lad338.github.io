@@ -13,7 +13,7 @@ const buttonStyle: SxProps = {
 export const AppBarMedium: React.FC<Props> = (props) => {
   return (
     <>
-      <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
+      <Box flexGrow={1} display={{ xs: 'none', sm: 'flex' }}>
         <Button href={'/'} sx={buttonStyle}>
           <Typography variant="h5" color="text.secondary">
             Home

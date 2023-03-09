@@ -5,14 +5,7 @@ import { Link } from '@mui/material'
 
 export const ResumeText: React.FC = () => {
   return (
-    <Box
-      id="resume-text"
-      sx={{
-        margin: 'auto',
-        width: '84vw',
-        marginBottom: 5,
-      }}
-    >
+    <Box id="resume-text" margin="auto" width="84vw" marginBottom={5}>
       <Typography variant="h4" marginBottom={5} color="text.secondary">
         Resume
       </Typography>

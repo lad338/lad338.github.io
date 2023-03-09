@@ -6,14 +6,12 @@ export const AboutText: React.FC = () => {
   return (
     <Box
       id="about-me-text"
-      sx={{
-        textAlign: 'left',
-        margin: 'auto',
-        width: '84vw',
-        maxWidth: 750,
-        minHeight: '65dvh',
-        color: 'grey.500',
-      }}
+      textAlign="left"
+      margin="auto"
+      width="84vw"
+      maxWidth={750}
+      minHeight="65dvh"
+      color="grey.500"
     >
       <Typography variant="h4" marginBottom={5} color="text.secondary">
         About me

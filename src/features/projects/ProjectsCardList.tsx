@@ -16,7 +16,7 @@ export const ProjectsCardList: React.FC = () => {
         content={
           <Typography variant="body1" color="grey.500">
             A web app to create a personal dictionary for one to jot notes, save
-            memos or any creative that one can think off.
+            memos or any creative ways that one can think off.
             <br />
             Contents saved are aimed to be optimized in being searched
             afterwards.

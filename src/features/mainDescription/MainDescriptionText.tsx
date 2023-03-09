@@ -7,12 +7,10 @@ export const MainDescriptionText: React.FC = () => {
   return (
     <Box
       id="main-description-text"
-      sx={{
-        margin: 'auto',
-        width: '84vw',
-        textAlign: 'left',
-        color: 'grey.500',
-      }}
+      margin="auto"
+      width="84vw"
+      textAlign="left"
+      color="grey.500"
     >
       <Typography
         variant="h1"
