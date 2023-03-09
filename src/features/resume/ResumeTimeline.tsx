@@ -12,31 +12,37 @@ import { CDCOppositeContent } from './CDCOppositeContent'
 import { CDCContent } from './CDCContent'
 import { CronosOppositeContent } from './CronosOppositeContent'
 import { CronosContent } from './CronosContent'
+import Box from '@mui/material/Box'
 
 export const ResumeTimeline: React.FC = () => {
   return (
-    <Timeline sx={{ width: '94vw' }}>
-      <ResumeTimelineItem
-        oppositeContent={<UniversityOppositeContent />}
-        content={<UniversityContent />}
-        icon={<SchoolIcon />}
-      />
-      <ResumeTimelineItem
-        oppositeContent={<GTOppositeContent />}
-        icon={<PowerSettingsNewIcon />}
-        content={<GTContent />}
-      />
-      <ResumeTimelineItem
-        oppositeContent={<CDCOppositeContent />}
-        icon={<TokenIcon />}
-        content={<CDCContent />}
-      />
-      <ResumeTimelineItem
-        oppositeContent={<CronosOppositeContent />}
-        icon={<TokenIcon />}
-        content={<CronosContent />}
-      />
-      {/*<ResumeTimelineItem oppositeContent={} icon={} content={}/>*/}
-    </Timeline>
+    <Box
+      sx={{ width: '94vw', margin: 'auto' }}
+      display={{ xs: 'none', md: 'flex' }}
+    >
+      <Timeline>
+        <ResumeTimelineItem
+          oppositeContent={<UniversityOppositeContent />}
+          content={<UniversityContent />}
+          icon={<SchoolIcon />}
+        />
+        <ResumeTimelineItem
+          oppositeContent={<GTOppositeContent />}
+          icon={<PowerSettingsNewIcon />}
+          content={<GTContent />}
+        />
+        <ResumeTimelineItem
+          oppositeContent={<CDCOppositeContent />}
+          icon={<TokenIcon />}
+          content={<CDCContent />}
+        />
+        <ResumeTimelineItem
+          oppositeContent={<CronosOppositeContent />}
+          icon={<TokenIcon />}
+          content={<CronosContent />}
+        />
+        {/*<ResumeTimelineItem oppositeContent={} icon={} content={}/>*/}
+      </Timeline>
+    </Box>
   )
 }

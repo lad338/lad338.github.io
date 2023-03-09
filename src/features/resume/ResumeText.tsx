@@ -16,7 +16,7 @@ export const ResumeText: React.FC = () => {
         Resume
       </Typography>
       <Typography color="grey.500">
-        You may download my latest resume here.
+        You may also download my latest resume here.
       </Typography>
     </Box>
   )

@@ -79,7 +79,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Box className="App">
         <CssBaseline />
-        {<AppBarContainer content={<Core />} />}
+        {<AppBarContainer children={<Core />} />}
       </Box>
     </ThemeProvider>
   )
