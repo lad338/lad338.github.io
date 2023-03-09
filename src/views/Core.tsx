@@ -4,13 +4,13 @@ import { MainDescription } from './MainDescription'
 import { About } from './About'
 import { Resume } from './Resume'
 import { Projects } from './Projects'
-import { AppAnchor } from '../features/appBar/AppAnchor'
+import { AppAnchor } from '../features/appBar'
 import {
   ABOUT_ANCHOR,
   PROJECTS_ANCHOR,
   RESUME_ANCHOR,
   TOP_ANCHOR,
-} from '../features/appBar/pages'
+} from '../features/appBar'
 
 export const Core: React.FC = () => {
   return (

@@ -1,0 +1,5 @@
+export * from './About'
+export * from './Core'
+export * from './Projects'
+export * from './MainDescription'
+export * from './Resume'

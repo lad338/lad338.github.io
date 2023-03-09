@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Box } from '@mui/material'
-import { ProjectsText } from '../features/projects/ProjectsText'
-import { ProjectsCardList } from '../features/projects/ProjectsCardList'
+import { ProjectsText, ProjectsCardList } from '../features/projects'
 
 export const Projects: React.FC = () => {
   return (
