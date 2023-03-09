@@ -7,7 +7,7 @@ export const About: React.FC = () => {
     <Box
       id="about-me-view"
       sx={{
-        minHeight: '65vh',
+        minHeight: '65dvh',
       }}
     >
       <AboutText />

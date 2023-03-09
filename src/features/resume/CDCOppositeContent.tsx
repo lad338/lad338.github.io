@@ -4,8 +4,8 @@ import { Typography } from '@mui/material'
 export const CDCOppositeContent: React.FC = () => {
   return (
     <>
-      <Typography variant="subtitle1" marginTop={3}>
-        Software Developer @ Crypto.com
+      <Typography variant="subtitle1" marginTop={3} color="text.primary">
+        Software Developer <br />@ Crypto.com
       </Typography>
       <Typography variant="subtitle2">Jun 2021 - Jan 2023</Typography>
       <Typography variant="body2" marginTop={3} marginBottom={3}>

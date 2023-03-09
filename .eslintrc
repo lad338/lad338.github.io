@@ -8,5 +8,11 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
+  ],
+  "no-restricted-imports": [
+    "error",
+    {
+      "patterns": ["@mui/*/*/*"]
+    }
   ]
 }

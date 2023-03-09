@@ -4,8 +4,8 @@ import Typography from '@mui/material/Typography'
 export const GTOppositeContent: React.FC = () => {
   return (
     <>
-      <Typography variant="subtitle1" marginTop={3}>
-        Backend Developer @ Green Tomato
+      <Typography variant="subtitle1" marginTop={3} color="text.primary">
+        Backend Developer <br />@ Green Tomato
       </Typography>
       <Typography variant="subtitle2">Oct 2018 - May 2021</Typography>
       <Typography variant="body2" marginTop={3}>

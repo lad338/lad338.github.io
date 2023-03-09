@@ -7,7 +7,9 @@ export const UniversityOppositeContent: React.FC = () => {
       <Typography variant="body2" marginTop={3}>
         Graduated from
       </Typography>
-      <Typography variant="subtitle1">the University of Hong Kong</Typography>
+      <Typography variant="subtitle1" color="text.primary">
+        The University of Hong Kong
+      </Typography>
       <Typography variant="subtitle2" marginBottom={3}>
         Bachelor of Engineering
         <br />

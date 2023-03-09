@@ -17,7 +17,7 @@ import Box from '@mui/material/Box'
 export const ResumeTimeline: React.FC = () => {
   return (
     <Box
-      sx={{ width: '94vw', margin: 'auto' }}
+      sx={{ width: '84vw', margin: 'auto' }}
       display={{ xs: 'none', md: 'flex' }}
     >
       <Timeline>
@@ -41,7 +41,6 @@ export const ResumeTimeline: React.FC = () => {
           icon={<TokenIcon />}
           content={<CronosContent />}
         />
-        {/*<ResumeTimelineItem oppositeContent={} icon={} content={}/>*/}
       </Timeline>
     </Box>
   )

@@ -11,7 +11,7 @@ export const AboutText: React.FC = () => {
         margin: 'auto',
         width: '84vw',
         maxWidth: 750,
-        minHeight: '65vh',
+        minHeight: '65dvh',
         color: 'grey.500',
       }}
     >

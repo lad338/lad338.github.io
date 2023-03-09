@@ -6,12 +6,7 @@ import { ResumeCardList } from '../features/resume/ResumeCardList'
 
 export const Resume: React.FC = () => {
   return (
-    <Box
-      id="resume-view"
-      sx={{
-        marginBottom: '35dvh',
-      }}
-    >
+    <Box id="resume-view" marginBottom="25dvh">
       <ResumeText />
       <ResumeTimeline />
       <ResumeCardList />

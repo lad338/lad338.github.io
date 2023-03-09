@@ -1,6 +1,6 @@
 import React from 'react'
 import Box from '@mui/material/Box'
-import { ResumeCard } from './ResumeCard'
+import { CardFrame } from '../../components/CardFrame'
 import { CDCOppositeContent } from './CDCOppositeContent'
 import { CDCContent } from './CDCContent'
 import { CronosOppositeContent } from './CronosOppositeContent'
@@ -17,7 +17,7 @@ export const ResumeCardList: React.FC = () => {
       display={{ xs: 'flex', md: 'none' }}
       flexDirection="column"
     >
-      <ResumeCard
+      <CardFrame
         children={
           <>
             <CDCOppositeContent />
@@ -25,7 +25,7 @@ export const ResumeCardList: React.FC = () => {
           </>
         }
       />
-      <ResumeCard
+      <CardFrame
         children={
           <>
             <CronosOppositeContent />
@@ -33,7 +33,7 @@ export const ResumeCardList: React.FC = () => {
           </>
         }
       />
-      <ResumeCard
+      <CardFrame
         children={
           <>
             <GTOppositeContent />
@@ -41,7 +41,7 @@ export const ResumeCardList: React.FC = () => {
           </>
         }
       />
-      <ResumeCard
+      <CardFrame
         children={
           <>
             <UniversityOppositeContent />

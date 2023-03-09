@@ -5,7 +5,7 @@ export const AppAnchor: React.FC<Props> = (props) => {
     <a
       style={{
         position: 'relative',
-        top: '-10dvh',
+        top: '-28dvh',
       }}
       id={props.anchor}
     />
