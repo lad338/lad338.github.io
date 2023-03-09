@@ -1,27 +1,35 @@
 import React, { ReactNode } from 'react'
 import Box from '@mui/material/Box'
 import { CardContent, CardMedia } from '@mui/material'
-import { CardFrame } from '../../components/CardFrame'
+import { CardFrame } from '../../components'
 import Typography from '@mui/material/Typography'
+import { ProjectCardActionBar } from './ProjectCardActionBar'
 
 export const ProjectCardFrame: React.FC<Props> = (props) => {
+  const [expanded, setExpanded] = React.useState(false)
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded)
+  }
+
   const cardContent = (
-    <CardContent
+    <Box
       className="project-description-container"
-      sx={{
-        marginLeft: 1,
-        marginY: 2,
-        display: 'flex',
-        flexDirection: 'column',
-      }}
+      display="flex"
+      flexDirection="column"
     >
-      <Box marginY="auto">
+      <Box marginY="auto" marginLeft={3}>
         <Typography variant="subtitle1" marginY={2} color="text.secondary">
           {props.title}
         </Typography>
         {props.content}
       </Box>
-    </CardContent>
+      <ProjectCardActionBar
+        openLink={props.openLink}
+        expanded={expanded}
+        handleExpandClick={handleExpandClick}
+      />
+    </Box>
   )
 
   return (
@@ -71,4 +79,5 @@ type Props = {
   image: string
   content: ReactNode
   title: string
+  openLink: string
 }

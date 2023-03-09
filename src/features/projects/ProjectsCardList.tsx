@@ -13,6 +13,7 @@ export const ProjectsCardList: React.FC = () => {
       <ProjectCardFrame
         image="/personal-dictionary-image.png"
         title="Personal Dictionary"
+        openLink="https://personal-dictionary-lad338.netlify.app/"
         content={
           <Typography variant="body1" color="grey.500">
             A web app to create a personal dictionary for one to jot notes, save
@@ -30,6 +31,7 @@ export const ProjectsCardList: React.FC = () => {
       <ProjectCardFrame
         image="/personal-website-image.png"
         title="Personal Website"
+        openLink="https://lad338.github.io"
         content={
           <Typography variant="body1" color="grey.500">
             My personal website.
