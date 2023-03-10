@@ -1,10 +1,32 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Chip, Typography } from '@mui/material'
 
-export const ProjectDetail: React.FC = () => {
+export const ProjectDetail: React.FC<ProjectDetailProps> = (props) => {
   return (
-    <Box id="project-detail-view">
-      <Typography variant="body2">Project Details</Typography>
+    <Box>
+      <Box>
+        <ul>
+          {props.detail.map((it) => {
+            return (
+              <li>
+                <Typography variant="body1" color="grey.500">
+                  {it}
+                </Typography>
+              </li>
+            )
+          })}
+        </ul>
+      </Box>
+      <Box>
+        {props.tags.map((tag) => {
+          return <Chip label={tag} sx={{ mx: 1 }} />
+        })}
+      </Box>
     </Box>
   )
+}
+
+export type ProjectDetailProps = {
+  detail: string[]
+  tags: string[]
 }

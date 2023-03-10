@@ -1,11 +1,12 @@
 import React, { ReactNode } from 'react'
 import Box from '@mui/material/Box'
-import { CardContent, CardMedia } from '@mui/material'
+import { CardMedia, Collapse } from '@mui/material'
 import { CardFrame } from '../../components'
 import Typography from '@mui/material/Typography'
 import { ProjectCardActionBar } from './ProjectCardActionBar'
+import { ProjectDetail, ProjectDetailProps } from './ProjectDetail'
 
-export const ProjectCardFrame: React.FC<Props> = (props) => {
+export const ProjectCardFrame: React.FC<ProjectCardFrameProps> = (props) => {
   const [expanded, setExpanded] = React.useState(false)
 
   const handleExpandClick = () => {
@@ -18,11 +19,17 @@ export const ProjectCardFrame: React.FC<Props> = (props) => {
       display="flex"
       flexDirection="column"
     >
-      <Box marginY="auto" marginLeft={3}>
+      <Box
+        marginY="auto"
+        marginLeft={3}
+        minWidth={{ xs: 'auto', md: '60dvw', lg: '50dvw' }}
+      >
         <Typography variant="subtitle1" marginY={2} color="text.secondary">
           {props.title}
         </Typography>
-        {props.content}
+        <Box maxWidth={{ xs: 'auto', md: '58dvw', lg: '48dvw' }}>
+          {props.content}
+        </Box>
       </Box>
       <ProjectCardActionBar
         openLink={props.openLink}
@@ -44,8 +51,8 @@ export const ProjectCardFrame: React.FC<Props> = (props) => {
             <CardMedia
               className="project-image-container"
               sx={{
-                width: '40%',
-                minWidth: '40%',
+                width: '30dvw',
+                minWidth: '30dvw',
                 height: 'auto',
                 backgroundSize: 'contain',
                 backgroundColor: '#2e2e2e',
@@ -69,15 +76,26 @@ export const ProjectCardFrame: React.FC<Props> = (props) => {
             />
             {cardContent}
           </Box>
+
+          <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <Box display="flex" flexDirection="column" marginY={2}>
+              <ProjectDetail
+                detail={props.detailProps.detail}
+                tags={props.detailProps.tags}
+              />
+            </Box>
+          </Collapse>
         </>
       }
     />
   )
 }
 
-type Props = {
+export type ProjectCardFrameProps = {
+  key: string
   image: string
   content: ReactNode
   title: string
   openLink: string
+  detailProps: ProjectDetailProps
 }

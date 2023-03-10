@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 import { ProjectCardFrame } from './ProjectCardFrame'
+import { PROJECTS } from './projects'
 
 export const ProjectsCardList: React.FC = () => {
   return (
@@ -10,41 +11,18 @@ export const ProjectsCardList: React.FC = () => {
       display="flex"
       flexDirection="column"
     >
-      <ProjectCardFrame
-        image="/personal-dictionary-image.png"
-        title="Personal Dictionary"
-        openLink="https://personal-dictionary-lad338.netlify.app/"
-        content={
-          <Typography variant="body1" color="grey.500">
-            A web app to create a personal dictionary for one to jot notes, save
-            memos or any creative ways that one can think off.
-            <br />
-            Contents saved are aimed to be optimized in being searched
-            afterwards.
-            <br />
-            It is designed to be a PWA that can be saved down on a mobile phone.
-            <br />
-            This is my very first Frontend project, created with React.
-          </Typography>
-        }
-      />
-      <ProjectCardFrame
-        image="/personal-website-image.png"
-        title="Personal Website"
-        openLink="https://lad338.github.io"
-        content={
-          <Typography variant="body1" color="grey.500">
-            My personal website.
-            <br />
-            The website that you are currently viewing.
-            <br />
-            It is designed to be responsive on width to support both computer
-            and mobile browsers.
-            <br />
-            This is my second React project.
-          </Typography>
-        }
-      />
+      {PROJECTS.map((project) => {
+        return (
+          <ProjectCardFrame
+            key={project.key + '-card'}
+            image={project.image}
+            title={project.title}
+            openLink={project.openLink}
+            content={project.content}
+            detailProps={project.detailProps}
+          />
+        )
+      })}
     </Box>
   )
 }
