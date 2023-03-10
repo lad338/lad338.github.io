@@ -11,6 +11,7 @@ import {
   RESUME_ANCHOR,
   TOP_ANCHOR,
 } from '../features/appBar'
+import { BottomBar } from '../features/bottomBar/BottomBar'
 
 export const Core: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ export const Core: React.FC = () => {
       <Resume />
       <AppAnchor anchor={PROJECTS_ANCHOR} />
       <Projects />
+      <BottomBar />
     </Box>
   )
 }

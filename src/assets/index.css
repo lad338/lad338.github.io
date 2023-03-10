@@ -16,3 +16,8 @@ code {
 html {
   scroll-behavior: smooth;
 }
+
+#bottom-bar-container {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09));
+  background-color: #121212;
+}

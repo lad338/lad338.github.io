@@ -1,5 +1,4 @@
 import React from 'react'
-import './assets/App.css'
 import { AppBarContainer } from './features/appBar'
 import { Core } from './views'
 import Box from '@mui/material/Box'
