@@ -1,25 +1,28 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
+import { SPACING_2 } from '../../sx-constants/spacing'
 import { COLORS } from '../../sx-constants/colors'
 
-export const BottomBar: React.FC = () => {
+interface IBottomBarProps {
+  children: string
+}
+
+export const BottomBar: React.FC<IBottomBarProps> = ({ children }) => {
   return (
     <Box
-      id="bottom-bar"
       sx={{
         backgroundColor: COLORS.appBar.bg.color,
         backgroundImage: COLORS.appBar.bg.image,
       }}
     >
       <Box
-        id="bottom-bar-container"
         minHeight="15dvh"
         textAlign="center"
         display="flex"
         flexDirection="column"
       >
-        <Typography variant="subtitle2" marginY={2}>
-          Created by Angus, 2023
+        <Typography variant="subtitle2" marginY={SPACING_2}>
+          {children}
         </Typography>
       </Box>
     </Box>

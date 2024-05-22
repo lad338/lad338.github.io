@@ -1,4 +1,4 @@
-export type Page = {
+export type PageType = {
   label: string
   anchor: string
 }

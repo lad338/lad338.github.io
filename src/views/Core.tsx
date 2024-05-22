@@ -1,30 +1,29 @@
 import * as React from 'react'
 import Box from '@mui/material/Box'
-import { MainDescription } from './MainDescription'
-import { About } from './About'
-import { Resume } from './Resume'
-import { Projects } from './Projects'
-import { AppAnchor } from '../features/appBar'
+import { Anchor } from '../components/Anchor'
 import {
   ABOUT_ANCHOR,
   PROJECTS_ANCHOR,
   RESUME_ANCHOR,
   TOP_ANCHOR,
-} from '../features/appBar'
-import { BottomBar } from '../features/bottomBar/BottomBar'
+} from '../pages/config'
+
+import { MainDescription } from './MainDescription'
+import { About } from './About'
+import { Resume } from './Resume'
+import { Projects } from './Projects'
 
 export const Core: React.FC = () => {
   return (
     <Box id="core-view">
-      <AppAnchor anchor={TOP_ANCHOR} />
+      <Anchor anchor={TOP_ANCHOR} />
       <MainDescription />
-      <AppAnchor anchor={ABOUT_ANCHOR} />
+      <Anchor anchor={ABOUT_ANCHOR} />
       <About />
-      <AppAnchor anchor={RESUME_ANCHOR} />
+      <Anchor anchor={RESUME_ANCHOR} />
       <Resume />
-      <AppAnchor anchor={PROJECTS_ANCHOR} />
+      <Anchor anchor={PROJECTS_ANCHOR} />
       <Projects />
-      <BottomBar />
     </Box>
   )
 }

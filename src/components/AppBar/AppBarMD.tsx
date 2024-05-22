@@ -1,30 +1,43 @@
 import * as React from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import { PAGES } from './pages'
-import { SxProps } from '@mui/system'
 import { Typography } from '@mui/material'
+import { SxProps } from '@mui/system'
+
+import { PageType } from '../types'
+
+import { SPACING_2 } from '../../sx-constants/spacing'
+
+interface IAppBarMDProps {
+  handleCloseNavMenu: () => void
+  pages: PageType[]
+  children: string
+}
 
 const buttonStyle: SxProps = {
-  my: 2,
+  my: SPACING_2,
   display: 'block',
 }
 
-export const AppBarMedium: React.FC<Props> = (props) => {
+export const AppBarMD: React.FC<IAppBarMDProps> = ({
+  pages,
+  children,
+  handleCloseNavMenu,
+}) => {
   return (
     <>
       <Box flexGrow={1} display={{ xs: 'none', sm: 'flex' }}>
         <Button href={'/'} sx={buttonStyle}>
           <Typography variant="h5" color="text.secondary">
-            Home
+            {children}
           </Typography>
         </Button>
 
-        {PAGES.map((page) => (
+        {pages.map((page) => (
           <Button
             key={page.anchor}
             href={'#' + page.anchor}
-            onClick={props.handleCloseNavMenu}
+            onClick={handleCloseNavMenu}
             sx={buttonStyle}
           >
             <Typography variant="h5" color="primary.contrastText">
@@ -35,8 +48,4 @@ export const AppBarMedium: React.FC<Props> = (props) => {
       </Box>
     </>
   )
-}
-
-type Props = {
-  handleCloseNavMenu: () => void
 }

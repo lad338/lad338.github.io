@@ -1,6 +1,10 @@
 import React from 'react'
 
-export const AppAnchor: React.FC<Props> = (props) => {
+interface IProps {
+  anchor: string
+}
+
+export const Anchor: React.FC<IProps> = (props) => {
   return (
     <a
       style={{
@@ -10,8 +14,4 @@ export const AppAnchor: React.FC<Props> = (props) => {
       id={props.anchor}
     />
   )
-}
-
-type Props = {
-  anchor: string
 }

@@ -1,13 +1,27 @@
-import Box from '@mui/material/Box'
+import * as React from 'react'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Typography from '@mui/material/Typography'
-import * as React from 'react'
-import { PAGES } from './pages'
+import Box from '@mui/material/Box'
+import { PageType } from '../types'
 
-export const AppBarSmall: React.FC<Props> = (props) => {
+interface ISmallProps {
+  anchorElNav: null | HTMLElement
+  handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void
+  handleCloseNavMenu: () => void
+  pages: PageType[]
+  children: string
+}
+
+export const AppBarSM: React.FC<ISmallProps> = ({
+  anchorElNav,
+  handleOpenNavMenu,
+  handleCloseNavMenu,
+  pages,
+  children,
+}) => {
   return (
     <>
       <Box position="relative" display={{ xs: 'fixed', sm: 'none' }}>
@@ -15,14 +29,14 @@ export const AppBarSmall: React.FC<Props> = (props) => {
           size="large"
           aria-controls="menu-appbar"
           aria-haspopup="true"
-          onClick={props.handleOpenNavMenu}
+          onClick={handleOpenNavMenu}
           color="inherit"
         >
           <MenuIcon />
         </IconButton>
         <Menu
           id="menu-appbar"
-          anchorEl={props.anchorElNav}
+          anchorEl={anchorElNav}
           anchorOrigin={{
             vertical: 'bottom',
             horizontal: 'left',
@@ -32,18 +46,18 @@ export const AppBarSmall: React.FC<Props> = (props) => {
             vertical: 'top',
             horizontal: 'left',
           }}
-          open={Boolean(props.anchorElNav)}
-          onClose={props.handleCloseNavMenu}
+          open={Boolean(anchorElNav)}
+          onClose={handleCloseNavMenu}
           sx={{
             display: { xs: 'block', sm: 'none' },
           }}
         >
-          {PAGES.map((page) => (
+          {pages.map((page) => (
             <MenuItem
               component="a"
               key={page.anchor}
               href={'#' + page.anchor}
-              onClick={props.handleCloseNavMenu}
+              onClick={handleCloseNavMenu}
             >
               <Typography textAlign="center">{page.label}</Typography>
             </MenuItem>
@@ -62,14 +76,8 @@ export const AppBarSmall: React.FC<Props> = (props) => {
           display: { xs: 'block', sm: 'none' },
         }}
       >
-        ANGUS LI
+        {children}
       </Typography>
     </>
   )
-}
-
-type Props = {
-  anchorElNav: null | HTMLElement
-  handleOpenNavMenu: (event: React.MouseEvent<HTMLElement>) => void
-  handleCloseNavMenu: () => void
 }
