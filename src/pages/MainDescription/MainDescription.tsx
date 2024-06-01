@@ -1,17 +1,11 @@
-import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
 import * as React from 'react'
+import { MainDescriptionSection } from '../../components/MainDescriptionSection'
+import Typography from '@mui/material/Typography'
 import { Link } from '@mui/material'
 
-export const MainDescriptionText: React.FC = () => {
+export const MainDescription: React.FC = () => {
   return (
-    <Box
-      id="main-description-text"
-      margin="auto"
-      width="84vw"
-      textAlign="left"
-      color="grey.500"
-    >
+    <MainDescriptionSection>
       <Typography
         variant="h1"
         color="text.secondary"
@@ -58,6 +52,6 @@ export const MainDescriptionText: React.FC = () => {
         </Link>
         .
       </Typography>
-    </Box>
+    </MainDescriptionSection>
   )
 }

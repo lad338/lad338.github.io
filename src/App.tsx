@@ -5,7 +5,7 @@ import { createTheme, IconButton, ThemeProvider } from '@mui/material'
 import createTypography from '@mui/material/styles/createTypography'
 import createPalette from '@mui/material/styles/createPalette'
 import { COLORS } from './sx-constants/colors'
-import { MainDescription, Projects, Resume } from './views'
+import { Projects, Resume } from './views'
 import { AppBarContainer } from './components/AppBarContainer'
 import {
   ABOUT_ANCHOR,
@@ -18,7 +18,7 @@ import { SxProps } from '@mui/system'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import { Anchor } from './components/Anchor'
-import { About } from './pages/About'
+import { About, MainDescription } from './pages'
 
 const APP_BAR_SM_CENTER_BUTTON_TEXT = 'ANGUS LI'
 const APP_BAR_MD_HOME_BUTTON_TEXT = 'HOME'
