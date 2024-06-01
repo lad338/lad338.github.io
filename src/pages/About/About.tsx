@@ -1,22 +1,14 @@
 import * as React from 'react'
-import { Box } from '@mui/material'
+import { AboutSection } from '../../components/AboutSection'
 import Typography from '@mui/material/Typography'
 
-export const AboutText: React.FC = () => {
+export const About: React.FC = () => {
   return (
-    <Box
-      id="about-me-text"
-      textAlign="left"
-      margin="auto"
-      width="84vw"
-      maxWidth={750}
-      minHeight="65dvh"
-      color="grey.500"
-    >
+    <AboutSection>
       <Typography variant="h4" marginBottom={5} color="text.secondary">
         About me
       </Typography>
-      <Typography>Hi, I am Angus. </Typography>
+      <Typography>Hi, I am Angus.</Typography>
       <Typography>
         Although I have a rather extensive work experience in backend
         development, I like to address myself as a Software Developer than a
@@ -28,10 +20,10 @@ export const AboutText: React.FC = () => {
         You may see me building stuff in different languages and frameworks. I
         am a backend developer at work, a web app and game developer at home.
       </Typography>
-      <Typography display="inline">Hence, a</Typography>
+      <Typography display="inline">Hence, a </Typography>
       <Typography display="inline" color="primary.contrastText">
         {' Software Developer.'}
       </Typography>
-    </Box>
+    </AboutSection>
   )
 }

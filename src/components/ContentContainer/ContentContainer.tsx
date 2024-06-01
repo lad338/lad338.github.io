@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from '@mui/material'
 
 interface IContentContainerProps {
-  children: JSX.Element
+  children: React.ReactNode
 }
 
 export const ContentContainer: React.FC<IContentContainerProps> = ({

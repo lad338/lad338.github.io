@@ -5,12 +5,20 @@ import { createTheme, IconButton, ThemeProvider } from '@mui/material'
 import createTypography from '@mui/material/styles/createTypography'
 import createPalette from '@mui/material/styles/createPalette'
 import { COLORS } from './sx-constants/colors'
-import { Core } from './views'
+import { MainDescription, Projects, Resume } from './views'
 import { AppBarContainer } from './components/AppBarContainer'
-import { CONTENT_PAGES } from './pages/config'
+import {
+  ABOUT_ANCHOR,
+  CONTENT_PAGES,
+  PROJECTS_ANCHOR,
+  RESUME_ANCHOR,
+  TOP_ANCHOR,
+} from './pages/config'
 import { SxProps } from '@mui/system'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import { Anchor } from './components/Anchor'
+import { About } from './pages/About'
 
 const APP_BAR_SM_CENTER_BUTTON_TEXT = 'ANGUS LI'
 const APP_BAR_MD_HOME_BUTTON_TEXT = 'HOME'
@@ -124,7 +132,14 @@ function App() {
           appBarSmCenterButtonText={APP_BAR_SM_CENTER_BUTTON_TEXT}
           appBarMdHomeButtonText={APP_BAR_MD_HOME_BUTTON_TEXT}
         >
-          {<Core />}
+          <Anchor anchor={TOP_ANCHOR} />
+          <MainDescription />
+          <Anchor anchor={ABOUT_ANCHOR} />
+          <About />
+          <Anchor anchor={RESUME_ANCHOR} />
+          <Resume />
+          <Anchor anchor={PROJECTS_ANCHOR} />
+          <Projects />
         </AppBarContainer>
       </Box>
     </ThemeProvider>
