@@ -2,7 +2,7 @@ import Typography from '@mui/material/Typography'
 import * as React from 'react'
 import Box from '@mui/material/Box'
 
-export const UniversityContent: React.FC = () => {
+export const HKUDetails: React.FC = () => {
   return (
     <>
       <Typography variant="body2">Final year project</Typography>

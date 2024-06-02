@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography } from '@mui/material'
 
-export const CronosOppositeContent: React.FC = () => {
+export const CronosBase: React.FC = () => {
   return (
     <>
       <Typography variant="subtitle1" marginTop={3} color="text.primary">

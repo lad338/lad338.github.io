@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography'
 import * as React from 'react'
 
-export const UniversityOppositeContent: React.FC = () => {
+export const HKUBase: React.FC = () => {
   return (
     <>
       <Typography variant="body2" marginTop={3}>
