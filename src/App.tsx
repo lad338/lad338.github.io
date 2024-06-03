@@ -40,19 +40,17 @@ const APP_BAR_ICON_STYLES: SxProps = {
   display: 'flex',
 }
 
-const APP_BAR_ICONS = ICONS.map((icon) => {
-  return (
-    <IconButton
-      id={icon.id}
-      key={icon.id}
-      sx={APP_BAR_ICON_STYLES}
-      href={icon.href}
-      target="_blank"
-    >
-      {icon.icon}
-    </IconButton>
-  )
-})
+const APP_BAR_ICONS = ICONS.map((icon) => (
+  <IconButton
+    id={icon.id}
+    key={icon.id}
+    sx={APP_BAR_ICON_STYLES}
+    href={icon.href}
+    target="_blank"
+  >
+    {icon.icon}
+  </IconButton>
+))
 
 const palette = createPalette({
   mode: 'dark',
@@ -119,30 +117,28 @@ const theme = createTheme({
   }),
 })
 
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <Box className="App">
-        <CssBaseline />
-        <AppBarContainer
-          bottomText={BOTTOM_BAR_TEXT}
-          pages={CONTENT_PAGES}
-          appBarIcons={APP_BAR_ICONS}
-          appBarSmCenterButtonText={APP_BAR_SM_CENTER_BUTTON_TEXT}
-          appBarMdHomeButtonText={APP_BAR_MD_HOME_BUTTON_TEXT}
-        >
-          <Anchor anchor={TOP_ANCHOR} />
-          <MainDescription />
-          <Anchor anchor={ABOUT_ANCHOR} />
-          <About />
-          <Anchor anchor={RESUME_ANCHOR} />
-          <Resume />
-          <Anchor anchor={PROJECTS_ANCHOR} />
-          <Projects />
-        </AppBarContainer>
-      </Box>
-    </ThemeProvider>
-  )
-}
+const App: FC = () => (
+  <ThemeProvider theme={theme}>
+    <Box className="App">
+      <CssBaseline />
+      <AppBarContainer
+        bottomText={BOTTOM_BAR_TEXT}
+        pages={CONTENT_PAGES}
+        appBarIcons={APP_BAR_ICONS}
+        appBarSmCenterButtonText={APP_BAR_SM_CENTER_BUTTON_TEXT}
+        appBarMdHomeButtonText={APP_BAR_MD_HOME_BUTTON_TEXT}
+      >
+        <Anchor anchor={TOP_ANCHOR} />
+        <MainDescription />
+        <Anchor anchor={ABOUT_ANCHOR} />
+        <About />
+        <Anchor anchor={RESUME_ANCHOR} />
+        <Resume />
+        <Anchor anchor={PROJECTS_ANCHOR} />
+        <Projects />
+      </AppBarContainer>
+    </Box>
+  </ThemeProvider>
+)
 
 export default App

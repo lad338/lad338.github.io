@@ -7,12 +7,10 @@ interface ICardFrameProps {
   children: ReactNode
 }
 
-export const CardFrame: FC<ICardFrameProps> = ({ children }) => {
-  return (
-    <Box width="100%" textAlign="left" marginY={SPACING_2}>
-      <Card variant="elevation" sx={{ borderRadius: 8, padding: SPACING_1 }}>
-        <Box margin={SPACING_2}>{children}</Box>
-      </Card>
-    </Box>
-  )
-}
+export const CardFrame: FC<ICardFrameProps> = ({ children }) => (
+  <Box width="100%" textAlign="left" marginY={SPACING_2}>
+    <Card variant="elevation" sx={{ borderRadius: 8, padding: SPACING_1 }}>
+      <Box margin={SPACING_2}>{children}</Box>
+    </Card>
+  </Box>
+)

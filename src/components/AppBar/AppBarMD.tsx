@@ -23,29 +23,27 @@ export const AppBarMD: FC<IAppBarMDProps> = ({
   pages,
   children,
   handleCloseNavMenu,
-}) => {
-  return (
-    <>
-      <Box flexGrow={1} display={{ xs: 'none', sm: 'flex' }}>
-        <Button href={'/'} sx={buttonStyle}>
-          <Typography variant="h5" color="text.secondary">
-            {children}
+}) => (
+  <>
+    <Box flexGrow={1} display={{ xs: 'none', sm: 'flex' }}>
+      <Button href={'/'} sx={buttonStyle}>
+        <Typography variant="h5" color="text.secondary">
+          {children}
+        </Typography>
+      </Button>
+
+      {pages.map((page) => (
+        <Button
+          key={page.anchor}
+          href={'#' + page.anchor}
+          onClick={handleCloseNavMenu}
+          sx={buttonStyle}
+        >
+          <Typography variant="h5" color="primary.contrastText">
+            {page.label}
           </Typography>
         </Button>
-
-        {pages.map((page) => (
-          <Button
-            key={page.anchor}
-            href={'#' + page.anchor}
-            onClick={handleCloseNavMenu}
-            sx={buttonStyle}
-          >
-            <Typography variant="h5" color="primary.contrastText">
-              {page.label}
-            </Typography>
-          </Button>
-        ))}
-      </Box>
-    </>
-  )
-}
+      ))}
+    </Box>
+  </>
+)

@@ -4,14 +4,12 @@ interface IProps {
   anchor: string
 }
 
-export const Anchor: FC<IProps> = (props) => {
-  return (
-    <a
-      style={{
-        position: 'relative',
-        top: '-28dvh',
-      }}
-      id={props.anchor}
-    />
-  )
-}
+export const Anchor: FC<IProps> = (props) => (
+  <a
+    style={{
+      position: 'relative',
+      top: '-28dvh',
+    }}
+    id={props.anchor}
+  />
+)

@@ -13,8 +13,8 @@ export const ResumeCards: FC<IResumeCardSectionProps> = ({ contents }) => (
     display={{ xs: 'flex', md: 'none' }}
     flexDirection="column"
   >
-    {contents.map(({ base, details, icon }) => (
-      <CardFrame>
+    {contents.map(({ base, details }, index) => (
+      <CardFrame key={`resume-${index}`}>
         {base}
         {details}
       </CardFrame>

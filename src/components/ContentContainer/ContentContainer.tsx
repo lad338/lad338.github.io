@@ -5,6 +5,6 @@ interface IContentContainerProps {
   children: ReactNode
 }
 
-export const ContentContainer: FC<IContentContainerProps> = ({ children }) => {
-  return <Container maxWidth="xl"> {children} </Container>
-}
+export const ContentContainer: FC<IContentContainerProps> = ({ children }) => (
+  <Container maxWidth="xl"> {children} </Container>
+)

@@ -8,18 +8,17 @@ interface IResumeTimelineProps {
   contents: ResumeContent[]
 }
 
-export const ResumeTimeline: FC<IResumeTimelineProps> = ({ contents }) => {
-  return (
-    <Box margin="auto" display={{ xs: 'none', md: 'flex' }}>
-      <Timeline>
-        {contents.map(({ base, details, icon }) => (
-          <ResumeTimelineItem
-            oppositeContent={base}
-            icon={icon}
-            content={details}
-          />
-        ))}
-      </Timeline>
-    </Box>
-  )
-}
+export const ResumeTimeline: FC<IResumeTimelineProps> = ({ contents }) => (
+  <Box margin="auto" display={{ xs: 'none', md: 'flex' }}>
+    <Timeline>
+      {contents.map(({ base, details, icon }, index) => (
+        <ResumeTimelineItem
+          key={`resume-${index}`}
+          oppositeContent={base}
+          icon={icon}
+          content={details}
+        />
+      ))}
+    </Timeline>
+  </Box>
+)

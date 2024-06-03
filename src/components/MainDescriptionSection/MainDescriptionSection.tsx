@@ -8,19 +8,17 @@ interface IMainDescriptionSectionProps {
 
 export const MainDescriptionSection: FC<IMainDescriptionSectionProps> = ({
   children,
-}) => {
-  return (
-    <ContentContainer>
-      <Box
-        color="grey.500"
-        display="flex"
-        flexDirection="column"
-        margin="auto"
-        maxWidth="xl"
-        minHeight="100dvh"
-      >
-        <Box margin="auto">{children}</Box>
-      </Box>
-    </ContentContainer>
-  )
-}
+}) => (
+  <ContentContainer>
+    <Box
+      color="grey.500"
+      display="flex"
+      flexDirection="column"
+      margin="auto"
+      maxWidth="xl"
+      minHeight="100dvh"
+    >
+      <Box margin="auto">{children}</Box>
+    </Box>
+  </ContentContainer>
+)

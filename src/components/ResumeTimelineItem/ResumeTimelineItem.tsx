@@ -16,23 +16,21 @@ export const ResumeTimelineItem: FC<IResumeTimelineItemProps> = ({
   content,
   icon,
   oppositeContent,
-}: IResumeTimelineItemProps) => {
-  return (
-    <div className="resume-item-container">
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0', color: 'grey.500' }}
-          variant="body2"
-        >
-          {oppositeContent}
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot>{icon}</TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ padding: SPACING_2 }}>{content}</TimelineContent>
-      </TimelineItem>
-    </div>
-  )
-}
+}: IResumeTimelineItemProps) => (
+  <div className="resume-item-container">
+    <TimelineItem>
+      <TimelineOppositeContent
+        sx={{ m: 'auto 0', color: 'grey.500' }}
+        variant="body2"
+      >
+        {oppositeContent}
+      </TimelineOppositeContent>
+      <TimelineSeparator>
+        <TimelineConnector />
+        <TimelineDot>{icon}</TimelineDot>
+        <TimelineConnector />
+      </TimelineSeparator>
+      <TimelineContent sx={{ padding: SPACING_2 }}>{content}</TimelineContent>
+    </TimelineItem>
+  </div>
+)

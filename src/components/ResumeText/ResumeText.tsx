@@ -8,23 +8,21 @@ interface IResumeTextProps {
   children: ReactNode
 }
 
-export const ResumeText: FC<IResumeTextProps> = ({ title, children }) => {
-  return (
-    <Box
-      margin="auto"
+export const ResumeText: FC<IResumeTextProps> = ({ title, children }) => (
+  <Box
+    margin="auto"
+    marginBottom={SPACING_4}
+    display="flex"
+    flexDirection="column"
+  >
+    <Typography
+      variant="h4"
       marginBottom={SPACING_4}
-      display="flex"
-      flexDirection="column"
+      color="text.secondary"
+      textAlign="center"
     >
-      <Typography
-        variant="h4"
-        marginBottom={SPACING_4}
-        color="text.secondary"
-        textAlign="center"
-      >
-        {title}
-      </Typography>
-      {children}
-    </Box>
-  )
-}
+      {title}
+    </Typography>
+    {children}
+  </Box>
+)

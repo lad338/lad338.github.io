@@ -7,25 +7,23 @@ interface IBottomBarProps {
   children: string
 }
 
-export const BottomBar: FC<IBottomBarProps> = ({ children }) => {
-  return (
+export const BottomBar: FC<IBottomBarProps> = ({ children }) => (
+  <Box
+    sx={{
+      backgroundColor: COLORS.appBar.bg.color,
+      backgroundImage: COLORS.appBar.bg.image,
+    }}
+  >
     <Box
-      sx={{
-        backgroundColor: COLORS.appBar.bg.color,
-        backgroundImage: COLORS.appBar.bg.image,
-      }}
+      marginTop="10dvh"
+      minHeight="15dvh"
+      textAlign="center"
+      display="flex"
+      flexDirection="column"
     >
-      <Box
-        marginTop="10dvh"
-        minHeight="15dvh"
-        textAlign="center"
-        display="flex"
-        flexDirection="column"
-      >
-        <Typography variant="subtitle2" marginY={SPACING_2}>
-          {children}
-        </Typography>
-      </Box>
+      <Typography variant="subtitle2" marginY={SPACING_2}>
+        {children}
+      </Typography>
     </Box>
-  )
-}
+  </Box>
+)

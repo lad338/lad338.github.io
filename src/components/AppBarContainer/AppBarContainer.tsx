@@ -21,17 +21,15 @@ export const AppBarContainer: FC<IAppBarContainerProps> = ({
   appBarSmCenterButtonText,
   appBarMdHomeButtonText,
   pages,
-}) => {
-  return (
-    <Box>
-      <AppBar
-        icons={appBarIcons}
-        smCenterButtonText={appBarSmCenterButtonText}
-        mdHomeButtonText={appBarMdHomeButtonText}
-        pages={pages}
-      />
-      {children}
-      <BottomBar>{bottomText}</BottomBar>
-    </Box>
-  )
-}
+}) => (
+  <Box>
+    <AppBar
+      icons={appBarIcons}
+      smCenterButtonText={appBarSmCenterButtonText}
+      mdHomeButtonText={appBarMdHomeButtonText}
+      pages={pages}
+    />
+    {children}
+    <BottomBar>{bottomText}</BottomBar>
+  </Box>
+)

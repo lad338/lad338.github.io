@@ -6,18 +6,16 @@ interface IAboutSectionProps {
   children: ReactNode
 }
 
-export const AboutSection: FC<IAboutSectionProps> = ({ children }) => {
-  return (
-    <ContentContainer>
-      <Box
-        color="grey.500"
-        textAlign="left"
-        margin="auto"
-        maxWidth="md"
-        minHeight="65dvh"
-      >
-        {children}
-      </Box>
-    </ContentContainer>
-  )
-}
+export const AboutSection: FC<IAboutSectionProps> = ({ children }) => (
+  <ContentContainer>
+    <Box
+      color="grey.500"
+      textAlign="left"
+      margin="auto"
+      maxWidth="md"
+      minHeight="65dvh"
+    >
+      {children}
+    </Box>
+  </ContentContainer>
+)

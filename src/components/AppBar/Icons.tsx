@@ -20,18 +20,16 @@ export interface IIconsProps {
 
 export const Icons: FC<IIconsProps> = ({ icons }: IIconsProps) => (
   <Box display="flex" flexDirection="row" position="relative">
-    {icons.map((icon) => {
-      return (
-        <IconButton
-          id={icon.id}
-          key={icon.id}
-          sx={ICON_STYLE}
-          href={icon.href}
-          target="_blank"
-        >
-          {icon.icon}
-        </IconButton>
-      )
-    })}
+    {icons.map((icon) => (
+      <IconButton
+        id={icon.id}
+        key={icon.id}
+        sx={ICON_STYLE}
+        href={icon.href}
+        target="_blank"
+      >
+        {icon.icon}
+      </IconButton>
+    ))}
   </Box>
 )
