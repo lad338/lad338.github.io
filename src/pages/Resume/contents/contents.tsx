@@ -1,5 +1,5 @@
 import { HKUBase, HKUDetails } from './HKU'
-import * as React from 'react'
+import { FC } from 'react'
 import SchoolIcon from '@mui/icons-material/School'
 import { GTBase, GTDetails } from './GT'
 import { CDCBase, CDCDetails } from './CDC'

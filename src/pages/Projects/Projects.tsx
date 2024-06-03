@@ -1,14 +1,28 @@
-import { ProjectCardFrameProps } from './ProjectCardFrame'
-import { Typography } from '@mui/material'
-import React from 'react'
+import { FC } from 'react'
+import { ProjectsText } from '../../components/ProjectsText'
+import Typography from '@mui/material/Typography'
+import { ProjectCards } from '../../components/ProjectCards'
+import { IProjectCardProps } from '../../components/ProjectCard'
+import { ContentContainer } from '../../components/ContentContainer'
 
-export const PROJECTS: ProjectCardFrameProps[] = [
+export const Projects: FC = () => (
+  <ContentContainer>
+    <ProjectsText title={'Projects'}>
+      <Typography color="grey.500">
+        Here are some projects I have created:
+      </Typography>
+    </ProjectsText>
+    <ProjectCards projects={PROJECTS} />
+  </ContentContainer>
+)
+
+const PROJECTS: IProjectCardProps[] = [
   {
     key: 'personal-dictionary',
     image: '/personal-dictionary-image.png',
     title: 'Personal Dictionary',
-    openLink: 'https://personal-dictionary-lad338.netlify.app/',
-    content: (
+    link: 'https://personal-dictionary-lad338.netlify.app/',
+    children: (
       <Typography variant="body1" color="grey.500">
         A web app to create a personal dictionary for one to jot notes, save
         memos or any creative ways that one can think off.
@@ -18,8 +32,8 @@ export const PROJECTS: ProjectCardFrameProps[] = [
         It is designed to be a PWA that can be saved down on a mobile phone.
       </Typography>
     ),
-    detailProps: {
-      detail: [
+    details: {
+      contents: [
         'This is my first frontend project, created with React.',
         'I had this project in mind because I sometimes find it difficult to have a handy notes application.',
         'I thought that it is better to search back items with tags instead of full text search.',
@@ -38,8 +52,8 @@ export const PROJECTS: ProjectCardFrameProps[] = [
     key: 'personal-website',
     image: '/personal-website-image.png',
     title: 'This Website',
-    openLink: 'https://lad338.github.io',
-    content: (
+    link: 'https://lad338.github.io',
+    children: (
       <Typography variant="body1" color="grey.500">
         My personal website to showcase my work experience and project
         experience.
@@ -48,8 +62,8 @@ export const PROJECTS: ProjectCardFrameProps[] = [
         <br />
       </Typography>
     ),
-    detailProps: {
-      detail: [
+    details: {
+      contents: [
         'It is designed to be responsive on width to support both computer and mobile browsers.',
         'This is my second frontend project. I tried it out as a single long web page style instead of using React routed pages',
       ],

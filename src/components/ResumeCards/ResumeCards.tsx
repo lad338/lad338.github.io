@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import Box from '@mui/material/Box'
 import { CardFrame } from '../CardFrame'
 import { ResumeContent } from '../types'
@@ -7,9 +7,7 @@ interface IResumeCardSectionProps {
   contents: ResumeContent[]
 }
 
-export const ResumeCardSection: React.FC<IResumeCardSectionProps> = ({
-  contents,
-}) => (
+export const ResumeCards: FC<IResumeCardSectionProps> = ({ contents }) => (
   <Box
     margin="auto"
     display={{ xs: 'flex', md: 'none' }}

@@ -1,14 +1,14 @@
-import * as React from 'react'
+import { FC, ReactNode } from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import { SPACING_4 } from '../../sx-constants/spacing'
 
 interface IResumeTextProps {
   title: string
-  content: React.ReactNode
+  children: ReactNode
 }
 
-export const ResumeText: React.FC<IResumeTextProps> = ({ title, content }) => {
+export const ResumeText: FC<IResumeTextProps> = ({ title, children }) => {
   return (
     <Box
       margin="auto"
@@ -24,7 +24,7 @@ export const ResumeText: React.FC<IResumeTextProps> = ({ title, content }) => {
       >
         {title}
       </Typography>
-      {content}
+      {children}
     </Box>
   )
 }

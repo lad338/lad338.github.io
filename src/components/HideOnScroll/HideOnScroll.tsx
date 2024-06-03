@@ -1,8 +1,8 @@
 import { Slide, useScrollTrigger } from '@mui/material'
 
-import React from 'react'
+import { FC } from 'react'
 
-export const HideOnScroll: React.FC<Props> = (props) => {
+export const HideOnScroll: FC<Props> = (props) => {
   const trigger = useScrollTrigger({
     target: window || undefined,
   })

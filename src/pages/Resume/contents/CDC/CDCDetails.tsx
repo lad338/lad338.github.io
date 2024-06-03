@@ -1,7 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 import { Typography } from '@mui/material'
 
-export const CDCDetails: React.FC = () => {
+export const CDCDetails: FC = () => {
   return (
     <>
       <Typography variant="body2" marginTop={5} marginBottom={2}>

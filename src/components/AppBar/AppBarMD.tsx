@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { FC } from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import { Typography } from '@mui/material'
@@ -19,7 +19,7 @@ const buttonStyle: SxProps = {
   display: 'block',
 }
 
-export const AppBarMD: React.FC<IAppBarMDProps> = ({
+export const AppBarMD: FC<IAppBarMDProps> = ({
   pages,
   children,
   handleCloseNavMenu,

@@ -1,9 +1,9 @@
-import * as React from 'react'
+import { FC } from 'react'
 import { MainDescriptionSection } from '../../components/MainDescriptionSection'
 import Typography from '@mui/material/Typography'
 import { Link } from '@mui/material'
 
-export const MainDescription: React.FC = () => {
+export const MainDescription: FC = () => {
   return (
     <MainDescriptionSection>
       <Typography

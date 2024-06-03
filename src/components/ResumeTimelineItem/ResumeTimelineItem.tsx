@@ -1,17 +1,18 @@
-import * as React from 'react'
+import { FC, ReactNode } from 'react'
 import TimelineItem from '@mui/lab/TimelineItem'
 import { TimelineContent, TimelineOppositeContent } from '@mui/lab'
 import TimelineSeparator from '@mui/lab/TimelineSeparator'
 import TimelineConnector from '@mui/lab/TimelineConnector'
 import TimelineDot from '@mui/lab/TimelineDot'
+import { SPACING_2 } from '../../sx-constants/spacing'
 
 interface IResumeTimelineItemProps {
-  oppositeContent: React.ReactNode
-  icon: React.ReactNode
-  content: React.ReactNode
+  oppositeContent: ReactNode
+  icon: ReactNode
+  content: ReactNode
 }
 
-export const ResumeTimelineItem = ({
+export const ResumeTimelineItem: FC<IResumeTimelineItemProps> = ({
   content,
   icon,
   oppositeContent,
@@ -30,7 +31,7 @@ export const ResumeTimelineItem = ({
           <TimelineDot>{icon}</TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent sx={{ py: 2, px: 2 }}>{content}</TimelineContent>
+        <TimelineContent sx={{ padding: SPACING_2 }}>{content}</TimelineContent>
       </TimelineItem>
     </div>
   )

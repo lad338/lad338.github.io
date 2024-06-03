@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { FC } from 'react'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Menu from '@mui/material/Menu'
@@ -15,7 +15,7 @@ interface ISmallProps {
   children: string
 }
 
-export const AppBarSM: React.FC<ISmallProps> = ({
+export const AppBarSM: FC<ISmallProps> = ({
   anchorElNav,
   handleOpenNavMenu,
   handleCloseNavMenu,

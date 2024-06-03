@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography'
-import * as React from 'react'
+import { FC } from 'react'
 
-export const GTDetails: React.FC = () => {
+export const GTDetails: FC = () => {
   return (
     <>
       <Typography variant="body2" marginTop={5} marginBottom={2}>

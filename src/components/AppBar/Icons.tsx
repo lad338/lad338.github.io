@@ -1,6 +1,6 @@
 import { SxProps } from '@mui/system'
 import { ReactElement } from 'react'
-import * as React from 'react'
+import { FC } from 'react'
 import { Box, IconButton } from '@mui/material'
 
 const ICON_STYLE: SxProps = {
@@ -18,7 +18,7 @@ export interface IIconsProps {
   icons: IconType[]
 }
 
-export const Icons: React.FC<IIconsProps> = ({ icons }: IIconsProps) => (
+export const Icons: FC<IIconsProps> = ({ icons }: IIconsProps) => (
   <Box display="flex" flexDirection="row" position="relative">
     {icons.map((icon) => {
       return (

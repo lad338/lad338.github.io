@@ -1,27 +1,27 @@
-import React from 'react'
+import { FC, ReactNode } from 'react'
 import { ContentContainer } from '../ContentContainer'
 import { ResumeText } from '../ResumeText'
 import { ResumeTimeline } from '../ResumeTimeline'
-import { ResumeCardSection } from '../ResumeCardSection'
+import { ResumeCards } from '../ResumeCards'
 import { ResumeContent } from '../types'
 import Box from '@mui/material/Box'
 
 interface IResumeSectionProps {
   title: string
-  textContent: React.ReactNode
+  textContent: ReactNode
   contents: ResumeContent[]
 }
 
-export const ResumeSection: React.FC<IResumeSectionProps> = ({
+export const ResumeSection: FC<IResumeSectionProps> = ({
   title,
   textContent,
   contents,
 }) => (
   <ContentContainer>
     <Box marginBottom="25dvh">
-      <ResumeText title={title} content={textContent} />
+      <ResumeText title={title}>{textContent}</ResumeText>
       <ResumeTimeline contents={contents} />
-      <ResumeCardSection contents={contents} />
+      <ResumeCards contents={contents} />
     </Box>
   </ContentContainer>
 )

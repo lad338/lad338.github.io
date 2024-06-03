@@ -1,12 +1,12 @@
-import React from 'react'
+import { FC, ReactNode } from 'react'
 import { ContentContainer } from '../ContentContainer'
 import { Box } from '@mui/material'
 
 interface IAboutSectionProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
-export const AboutSection: React.FC<IAboutSectionProps> = ({ children }) => {
+export const AboutSection: FC<IAboutSectionProps> = ({ children }) => {
   return (
     <ContentContainer>
       <Box

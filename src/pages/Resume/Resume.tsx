@@ -2,7 +2,7 @@ import { ResumeSection } from '../../components/ResumeSection'
 import { RESUME_CONTENTS } from './contents'
 import { Link } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import * as React from 'react'
+import { FC } from 'react'
 
 export const Resume = () => (
   <ResumeSection

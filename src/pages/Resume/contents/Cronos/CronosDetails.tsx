@@ -1,7 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 import { Typography } from '@mui/material'
 
-export const CronosDetails: React.FC = () => {
+export const CronosDetails: FC = () => {
   return (
     <>
       <Typography variant="body2" marginTop={5} marginBottom={2}>

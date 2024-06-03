@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { Box, Typography } from '@mui/material'
 import { SPACING_2 } from '../../sx-constants/spacing'
 import { COLORS } from '../../sx-constants/colors'
@@ -7,7 +7,7 @@ interface IBottomBarProps {
   children: string
 }
 
-export const BottomBar: React.FC<IBottomBarProps> = ({ children }) => {
+export const BottomBar: FC<IBottomBarProps> = ({ children }) => {
   return (
     <Box
       sx={{
@@ -16,6 +16,7 @@ export const BottomBar: React.FC<IBottomBarProps> = ({ children }) => {
       }}
     >
       <Box
+        marginTop="10dvh"
         minHeight="15dvh"
         textAlign="center"
         display="flex"

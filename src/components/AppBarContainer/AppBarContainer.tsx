@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC, ReactNode, ReactElement } from 'react'
 
 import Box from '@mui/material/Box'
 import { BottomBar } from '../BottomBar'
@@ -6,15 +6,15 @@ import { AppBar, IIconsProps } from '../AppBar'
 import { PageType } from '../types'
 
 interface IAppBarContainerProps {
-  children: React.ReactNode
+  children: ReactNode
   bottomText: string
   pages: PageType[]
-  appBarIcons: React.ReactElement<IIconsProps>[]
+  appBarIcons: ReactElement<IIconsProps>[]
   appBarSmCenterButtonText: string
   appBarMdHomeButtonText: string
 }
 
-export const AppBarContainer: React.FC<IAppBarContainerProps> = ({
+export const AppBarContainer: FC<IAppBarContainerProps> = ({
   children,
   bottomText,
   appBarIcons,

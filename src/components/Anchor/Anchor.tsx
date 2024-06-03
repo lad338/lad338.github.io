@@ -1,10 +1,10 @@
-import React from 'react'
+import { FC } from 'react'
 
 interface IProps {
   anchor: string
 }
 
-export const Anchor: React.FC<IProps> = (props) => {
+export const Anchor: FC<IProps> = (props) => {
   return (
     <a
       style={{

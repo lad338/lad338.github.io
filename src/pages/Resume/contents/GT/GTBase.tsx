@@ -1,7 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 import Typography from '@mui/material/Typography'
 
-export const GTBase: React.FC = () => {
+export const GTBase: FC = () => {
   return (
     <>
       <Typography variant="subtitle1" marginTop={3} color="text.primary">

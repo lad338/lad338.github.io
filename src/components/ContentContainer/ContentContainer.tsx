@@ -1,12 +1,10 @@
-import React from 'react'
+import { FC, ReactNode } from 'react'
 import { Container } from '@mui/material'
 
 interface IContentContainerProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
-export const ContentContainer: React.FC<IContentContainerProps> = ({
-  children,
-}) => {
+export const ContentContainer: FC<IContentContainerProps> = ({ children }) => {
   return <Container maxWidth="xl"> {children} </Container>
 }

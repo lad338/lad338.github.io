@@ -1,8 +1,8 @@
-import * as React from 'react'
+import { FC } from 'react'
 import { AboutSection } from '../../components/AboutSection'
 import Typography from '@mui/material/Typography'
 
-export const About: React.FC = () => {
+export const About: FC = () => {
   return (
     <AboutSection>
       <Typography variant="h4" marginBottom={5} color="text.secondary">
